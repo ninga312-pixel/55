@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>어머니 칠순 잔치 초대장</title>
   
-  <!-- 카카오톡 미리보기 설정 -->
   <meta property="og:title" content="어머니 칠순 잔치에 초대합니다">
   <meta property="og:description" content="2026년 7월 25일 (토) 12:00 | 서울 종로구 삼청로 4">
   <meta property="og:type" content="website">
 
-  <!-- 폰트 적용 (나눔명조, Noto Sans) -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
   
   <style>
@@ -32,11 +30,21 @@
       text-align: center;
     }
     .header { font-family: 'Nanum Myeongjo', serif; font-size: 24px; margin-bottom: 30px; color: #8b7355; }
-    .hero-img { width: 100%; border-radius: 10px; margin-bottom: 30px; background: #eee; height: 250px; display: flex; align-items: center; justify-content: center; color: #999; }
+    
+    /* 사진 영역 스타일 수정 */
+    .hero-img { width: 100%; border-radius: 10px; margin-bottom: 30px; overflow: hidden; }
+    .hero-img img { width: 100%; display: block; object-fit: cover; }
+    
     .message { margin-bottom: 40px; font-size: 16px; color: #555; }
     .info-section { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 30px 0; margin-bottom: 30px; }
     .info-row { margin-bottom: 15px; }
     .info-row b { display: block; color: #8b7355; font-size: 14px; margin-bottom: 5px; }
+    
+    /* 지도 및 버튼 스타일 추가 */
+    .map-container { margin-top: 20px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+    .map-container iframe { width: 100%; height: 250px; border: none; display: block; }
+    .btn-naver { display: block; background: #03c75a; color: white; text-decoration: none; padding: 14px; border-radius: 8px; margin-top: 10px; font-weight: bold; font-size: 15px; }
+    
     .parking-box { background: #f9f9f9; padding: 15px; border-radius: 10px; font-size: 14px; text-align: left; }
     .closing { font-family: 'Nanum Myeongjo', serif; font-size: 17px; color: #8b7355; margin-top: 30px; }
   </style>
@@ -47,8 +55,7 @@
   <div class="header">어머니 칠순을 축하합니다</div>
   
   <div class="hero-img">
-    <!-- 실제 사진 경로로 수정하세요 -->
-    <img src="1526199426699.jpg" alt="어머니 사진" style="width:100%; border-radius:10px;">
+    <img src="mom.jpg" alt="어머니 사진">
   </div>
 
   <div class="message">
@@ -68,10 +75,18 @@
       <b>장소</b>
       서울 종로구 삼청로 4, 4층
     </div>
+    
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=서울 종로구 삼청로 4&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+    </div>
+    
+    <a href="https://map.naver.com/p/search/서울%20종로구%20삼청로%204" target="_blank" class="btn-naver">
+      📍 네이버 지도에서 길찾기
+    </a>
   </div>
 
   <div class="parking-box">
-    <b>주차 안내</b><br>
+    <b>🚗 주차 안내</b><br>
     서울 종로구 율곡로 6<br>
     아마노 트윈트리타워 주차장을 이용해 주십시오.
   </div>
@@ -83,5 +98,6 @@
 </div>
 
 </body>
+</html>
 </html>
 ```eof
